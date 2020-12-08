@@ -21,7 +21,7 @@ The following topics are covered:
 * Running a private container registry
 * Seting up a mac to higly integrate this environment
 
-## Goal
+# Goal
 
 A kubernetes environment, that serves all of our customer projects. The web apps are served over https. Any domain name can be configured to point to the services in the cluster. Customers can browse the apps by a given domain and credentials to see always the most recent builds of their product. Gitlab, builds the commited code into oci compliant containers and deploys them straight after the code was commited.
 
@@ -37,3 +37,29 @@ Especially if steps like
 are part of the pipelines.
 
 The goal is to increase operational efficiency, increase product deployment velocity and increase product quality.
+
+# microk8s
+
+MicroK8s is a single package that enables developers to get a fully featured, conformant and secure Kubernetes system running. Designed for local development, IoT appliances, CI/CD, and use at the edge, MicroK8s is available as a snap package eveloped from canonical.
+
+## Why MicroK8s?
+
+Some advantages of microk8s:
+
+* Reduces cloud vender lock-in as it runs on any Ubuntu box
+* Lower cost than a mature kubernetes cluster or products like Openshift
+* Mature, easy to install, well supported
+* Can scale since 1.19 which other lightweight distributiuons like k3s, minikube, minishift dont do
+
+Some disadvantages of microk8s:
+
+* Not all Kubernetes features are supported (e.g. load balancing)
+* Non production deployment configuration may be slightly different to production deployment configuration
+* Management of the microk8s installation (patching, disk space, security, etc.)
+* Not enterprise grade
+
+For our needs with several clients, small budget and only a couple of applications, the advantages of using microk8s for our dev ops structures and deployments, considerably outweighs any disadvantages.
+
+# Table of contents
+
+1. Setup of microk8s cluster on hcloud as single node or ha cluster
