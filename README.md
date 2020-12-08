@@ -2,6 +2,7 @@
 
 The documents in this repository aim to explain how we use microk8s to automate our development workflows.
 Kubernetes as a hugely powerful open source container orchestration engine for automating deployment, scaling, and management of containerized applications, becomes maintainable with products like k3s or minikube or microk8s. Microk8s as flavor running on ubuntu is what we decided to take as it's easy to manage and operate, does not need etcd and the serparation of nodes in worker and master roles and follows a setup, start and forget approach. This is exactly what small companies and one man show developers need for building software and following devops paradigmas.
+
 The docs will provide an step by step tutorial on how to setup microk8s with terraform and ansible in hcloud as single node or ha cluster.
 On this cluster, a gitlab instance automates the builds of our software projects and deploys them into staging and production environments which are availible for our customers.
 A private container registry, the use of industry standard tools like skopeo for container operations or clair for automated vulnerability scanning will be explained, How we use them and what we achieve by utilising them.
@@ -62,4 +63,4 @@ For our needs with several clients, small budget and only a couple of applicatio
 
 # Table of contents
 
-1. Setup of microk8s cluster on hcloud as single node or ha cluster
+1. [Setup of microk8s cluster on hcloud as single node or ha cluster](01-Setup-microk8s.md)
