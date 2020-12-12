@@ -182,4 +182,6 @@ Now nslookup should resolve an ip for the name nginx
 nslookup nginx.default.svc.cluster.local
 ````
 
-[Back to Table of Contents](README.md) [ Chapter 2 - Using microk8s](02-Using-microk8s.md)
+[Back to Table of Contents](README.md)
+
+[ Chapter 2 - Using microk8s](02-Using-microk8s.md)
