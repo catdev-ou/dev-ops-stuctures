@@ -64,3 +64,5 @@ For our needs with several clients, small budget and only a couple of applicatio
 # Table of contents
 
 1. [Setup of microk8s cluster on hcloud as single node or ha cluster](01-Setup-microk8s.md)
+
+2. [Usage of microk8s cluster for development](02-Using-microk8s.md)

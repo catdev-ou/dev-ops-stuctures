@@ -161,3 +161,25 @@ microk8s.kubectl get all --all-namespaces
 ````
 
 The browser should show a "Welcome to nginx!"
+
+Setup dns
+
+To resolve the service via name, the following steps are neccesary
+
+````bash
+# Let's add an additional nameserver using resolvconf.
+sudo apt-get install resolvconf
+sudo vim /etc/resolvconf/resolv.conf.d/tail
+# Add the following line:
+nameserver 10.152.183.X
+# , where 10.152.183.X is your Kubernetes DNS IP address
+sudo systemctl restart resolvconf
+````
+
+Now nslookup should resolve an ip for the name nginx
+
+````bash
+nslookup nginx.default.svc.cluster.local
+````
+
+[Back to Table of Contents](README.md) [ Chapter 2 - Using microk8s](02-Using-microk8s.md)
